@@ -28,8 +28,7 @@ stage('Build Image') {
         '''
         sh '''
         ./mvnw package -DskipTests \
-        -Dquarkus.jib.base-jvm-image=quay.io/redhattraining/do400-java-alpineopenjdk11-
-        jre:latest \
+        -Dquarkus.jib.base-jvm-image=quay.io/redhattraining/do400-java-alpineopenjdk11-jre:latest \
         -Dquarkus.container-image.build=true \
         -Dquarkus.container-image.registry=quay.io \
         -Dquarkus.container-image.group=$QUAY_USR \
@@ -40,7 +39,6 @@ stage('Build Image') {
         '''
     }
 }
-    }
 }
 }
-}
+
