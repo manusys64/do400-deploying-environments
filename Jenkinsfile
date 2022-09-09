@@ -30,7 +30,7 @@ stage('Build Image') {
         ./mvnw package -DskipTests \
         -Dquarkus.jib.base-jvm-image=quay.io/redhattraining/do400-java-alpineopenjdk11-jre:latest \
         -Dquarkus.container-image.build=true \
-        -Dquarkus.container-image.builder=jib \ //added by me from quarkus documentation
+        -Dquarkus.container-image.builder=jib \
         -Dquarkus.container-image.registry=quay.io \
         -Dquarkus.container-image.group=$QUAY_USR \
         -Dquarkus.container-image.name=do400-deploying-environments \
